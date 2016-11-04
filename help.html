@@ -1,0 +1,654 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><META content="IE=5.0000" http-equiv="X-UA-Compatible">
+
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">   
+<META name="GENERATOR" content="MSHTML 10.00.9200.16614"></HEAD>   
+<BODY>
+<H2 align="center">触摸精灵帮助手册</H2><!-- 索引 -->     
+<UL>
+  <LI><A href="file:///C:/Users/uxiangRD2/AppData/Roaming/ihelper/a96afbcbb71a8750acb8e100623d84b1615a6f39/user/help.html#basic">1 
+  基本使用</A>       
+  <UL>
+    <LI><A href="file:///C:/Users/uxiangRD2/AppData/Roaming/ihelper/a96afbcbb71a8750acb8e100623d84b1615a6f39/user/help.html#how_record">1.1 
+    如何录制</A></LI>
+    <LI><A href="file:///C:/Users/uxiangRD2/AppData/Roaming/ihelper/a96afbcbb71a8750acb8e100623d84b1615a6f39/user/help.html#how_play">1.2 
+    如何播放</A></LI>
+    <LI><A href="file:///C:/Users/uxiangRD2/AppData/Roaming/ihelper/a96afbcbb71a8750acb8e100623d84b1615a6f39/user/help.html#how_edit">1.3 
+    如何编辑</A></LI>
+    <LI><A href="file:///C:/Users/uxiangRD2/AppData/Roaming/ihelper/a96afbcbb71a8750acb8e100623d84b1615a6f39/user/help.html#how_edit">1.4 
+    如何注册</A></LI></UL></LI>
+  <LI><A href="file:///C:/Users/uxiangRD2/AppData/Roaming/ihelper/a96afbcbb71a8750acb8e100623d84b1615a6f39/user/help.html#script">2 
+  脚本语言</A>       
+  <UL>
+    <LI><A href="file:///C:/Users/uxiangRD2/AppData/Roaming/ihelper/a96afbcbb71a8750acb8e100623d84b1615a6f39/user/help.html#script1">2.1 
+    基本语法</A></LI>
+    <LI><A href="file:///C:/Users/uxiangRD2/AppData/Roaming/ihelper/a96afbcbb71a8750acb8e100623d84b1615a6f39/user/help.html#script2">2.2 
+    扩展函数</A></LI></UL></LI></UL><!-- 基本使用 -->     
+<H3><A name="basic">1 基本使用</A></H3>
+<H4><A name="how_record">1.1 如何录制</A></H4>
+<OL>
+  <LI>点击底部导航栏切换到“列表”界面。</LI>
+  <LI>单击左上角的“新建”按钮，在弹出的菜单中选择“录制”。</LI>
+  <LI>在弹出的对话框中填写脚本名称，然后点击“确定”按钮。</LI>
+  <LI>切换到手机的任意界面，按下音量键开始录制。</LI>
+  <LI>再次按下音量键停止播放。</LI></OL>
+<HR>
+
+<H4><A name="how_play">1.2 如何播放</A></H4>
+<OL>
+  <LI>点击底部导航栏切换到“列表”界面。</LI>
+  <LI>单击想要播放的脚本。</LI>
+  <LI>阅读弹出的提示对话框中的内容，然后点击“确定”按钮。</LI>
+  <LI>切换到手机的任意界面，按下音量键开始播放。</LI>
+  <LI>脚本在播放完毕后会自动停止，或在播放过程中再次按下热键停止播放。</LI></OL>
+<HR>
+
+<H4><A name="how_edit">1.3 如何编辑</A></H4>
+<OL>
+  <LI>点击底部导航栏切换到“列表”界面。</LI>
+  <LI>单击想要编辑的脚本右侧的蓝色箭头”。</LI>
+  <LI>在弹出的界面中直接编辑脚本文件。</LI>
+  <LI>点击“保存”按钮保存脚本文件。</LI></OL>
+<HR>
+
+<H4><A name="how_register">1.4 如何注册</A></H4>
+<OL>
+  <LI>登录<A 
+  href="http://aisence.taobao.com/">http://aisence.taobao.com/</A>，按照里面的购买流程注册。</LI>
+  <LI>点击“触摸精灵”的“设置”中的“序列号激活”，输入淘宝获取到的序列号，点击“激活”按钮。</LI>"       
+  <LI>软件将自动下载注册文件到/var/touchelf/key，重新进入“注册状态”，显示已注册和“有效期”则成功。</LI></OL>
+<HR>
+<!-- 高级使用 -->     
+<H3><A name="script">2 脚本语言</A></H3>
+<P>IOS版本触摸精灵的脚本存放目录为"/var/touchelf/scripts/"。<BR>IOS触摸精灵的坐标体系，始终以HOME键在下（即竖屏）时，左上角为（0，0），而不管画面是否旋转。<BR> 
+   触摸精灵使用Lua语言作为底层脚本语言，支持Lua 
+5.2版本的所有语法与基本库函数，并在Lua语言的基础上添加了一些扩展函数，用于发送触摸事件、找图、找色等高级功能的实现。     </P>
+<HR>
+
+<H4><A name="script1">2.1 基本语法</A></H4>
+<P>    用户可参考Lua的<A 
+href="http://www.lua.org/manual/5.2/">官方手册</A>或者其他资料来学习以下基本语法：     
+<UL>
+  <LI>注释</LI>
+  <LI>变量与类型</LI>
+  <LI>运算符</LI>
+  <LI>赋值</LI>
+  <LI>条件控制</LI>
+  <LI>循环控制</LI>
+  <LI>函数定义</LI>
+  <LI>库函数</LI>
+  <LI>等等</LI></UL>
+<P></P>
+<HR>
+
+<H4><A name="script2">2.2 扩展函数</A></H4>
+<H5>2.2.1 logDebug()</H5>
+<P>输出调试信息到系统日志</P>
+<UL>
+  <LI>参数       
+  <UL>
+    <LI>参数1：调试信息（string）</LI></UL></LI>
+  <LI>返回值       
+  <UL>
+    <LI>无</LI></UL></LI>
+  <LI>示例       
+  <UL>
+<PRE>logDebug("hello"); -- 输出"hello"到系统日志
+          </PRE></UL></LI></UL>
+<HR>
+
+<H5>2.2.2 mSleep()</H5>
+<P>进行毫秒级别延迟</P>
+<UL>
+  <LI>参数       
+  <UL>
+    <LI>参数1：毫秒数（number）</LI></UL></LI>
+  <LI>返回值       
+  <UL>
+    <LI>无</LI></UL></LI>
+  <LI>示例       
+  <UL>
+<PRE>mSleep(1000); -- 延迟1秒
+          </PRE></UL></LI></UL>
+<HR>
+
+<H5>2.2.3 notifyMessage()</H5>
+<P>以文字提示框的方式通知用户</P>
+<UL>
+  <LI>参数       
+  <UL>
+    <LI>参数1：提示文字（string）</LI></UL></LI>
+  <LI>返回值       
+  <UL>
+    <LI>无</LI></UL></LI>
+  <LI>示例       
+  <UL>
+<PRE>notifyMessage("hello"); -- 在屏幕上显示"hello"
+          </PRE></UL></LI></UL>
+<HR>
+
+<H5>2.2.4 notifyVibrate()</H5>
+<P>以震动方式通知用户</P>
+<UL>
+  <LI>参数       
+  <UL>
+    <LI>参数1：毫秒数（number）</LI></UL></LI>
+  <LI>返回值       
+  <UL>
+    <LI>无</LI></UL></LI>
+  <LI>示例       
+  <UL>
+<PRE>notifyVibrate(1000); -- 让设备震动1秒
+          </PRE></UL></LI></UL>
+<HR>
+
+<H5>2.2.5 notifyVoice()</H5>
+<P>以播放音频的方式通知用户</P>
+<UL>
+  <LI>参数       
+  <UL>
+    <LI>参数1：音频路径（string）</LI></UL></LI>
+  <LI>返回值       
+  <UL>
+    <LI>无</LI></UL></LI>
+  <LI>示例       
+  <UL>
+<PRE>notifyVoice("/var/touchelf/a.mp3"); -- 播放路径为"/var/touchelf/a.mp3"的音频
+          </PRE></UL></LI></UL>
+<HR>
+
+<H5>2.2.6 touchDown()</H5>
+<P>发送手指按下事件</P>
+<UL>
+  <LI>参数       
+  <UL>
+    <LI>参数1：手指ID, 范围0~128, 用于标识一个手指，在后续的touchMove()和touchUp()中需要使用（number）</LI>
+    <LI>参数2：X坐标 （number）</LI>
+    <LI>参数3：Y坐标 （number）</LI></UL></LI>
+  <LI>返回值       
+  <UL>
+    <LI>无</LI></UL></LI>
+  <LI>示例       
+  <UL>
+<PRE>touchDown(0, 100, 100); -- ID为0的手指在坐标为(100, 100)的点按下
+touchUp(0);             -- ID为0的手指抬起
+          </PRE></UL></LI></UL>
+<HR>
+
+<H5>2.2.7 touchMove()</H5>
+<P>发送手指移动事件</P>
+<UL>
+  <LI>参数       
+  <UL>
+    <LI>参数1：touchDown()时传入的手指ID（number）</LI>
+    <LI>参数2：X坐标 （number）</LI>
+    <LI>参数3：Y坐标 （number）</LI></UL></LI>
+  <LI>返回值       
+  <UL>
+    <LI>无</LI></UL></LI>
+  <LI>示例       
+  <UL>
+<PRE>touchDown(0, 100, 100); -- ID为0的手指在坐标为(100, 100)的点按下
+touchMove(0, 200, 100); -- ID为0的手指滑动到坐标为(200, 100)的点
+touchUp(0);             -- ID为0的手指抬起
+          </PRE></UL></LI></UL>
+<HR>
+
+<H5>2.2.8 touchUp()</H5>
+<P>发送手指抬起事件</P>
+<UL>
+  <LI>参数       
+  <UL>
+    <LI>参数1：touchDown()时传入的手指ID（number）</LI></UL></LI>
+  <LI>返回值       
+  <UL>
+    <LI>无</LI></UL></LI>
+  <LI>示例       
+  <UL>
+<PRE>touchDown(0, 100, 100); -- ID为0的手指在坐标为(100, 100)的点按下
+touchUp(0);             -- ID为0的手指抬起
+          </PRE></UL></LI></UL>
+<HR>
+
+<H5>2.2.9 getScreenResolution()</H5>
+<P>获取当前屏幕分辨率</P>
+<UL>
+  <LI>参数       
+  <UL>
+    <LI>无</LI></UL></LI>
+  <LI>返回值       
+  <UL>
+    <LI>返回1：宽度（number）</LI>
+    <LI>返回2：高度（number）</LI></UL></LI>
+  <LI>示例       
+  <UL>
+<PRE>w, h = getScreenResolution();                  -- 将屏幕宽度和高度分别保存在变量w、h中
+notifyMessage(string.format("%d,%d\n", w, h)); -- 将宽度和高度用提示框显示到屏幕上
+          </PRE></UL></LI></UL>
+<HR>
+
+<H5>2.2.10 getScreenColorBits()</H5>
+<P>获取当前屏幕色彩位数</P>
+<UL>
+  <LI>参数       
+  <UL>
+    <LI>无</LI></UL></LI>
+  <LI>返回值       
+  <UL>
+    <LI>返回1：色彩位数（number）</LI></UL></LI>
+  <LI>示例       
+  <UL>
+<PRE>c = getScreenColorBits();                -- 将屏幕色彩位数保存在变量c中
+notifyMessage(string.format("%d\n", c)); -- 将色彩位数用提示框显示到屏幕上
+          </PRE></UL></LI></UL>
+<HR>
+
+<H5>2.2.11 getColor()</H5>
+<P>获取指定像素的颜色</P>
+<UL>
+  <LI>参数       
+  <UL>
+    <LI>参数1：X坐标 （number）</LI>
+    <LI>参数2：Y坐标 （number）</LI></UL></LI>
+  <LI>返回值       
+  <UL>
+    <LI>返回1：色彩位数（number）</LI></UL></LI>
+  <LI>示例       
+  <UL>
+<PRE>c = getColor(100, 100);         -- 将坐标为(100,100)的点的颜色保存在变量c中
+if c == 0x0000ff then           -- 如果该点颜色为0x0000ff(纯蓝色)
+    touchDown(0, 100, 100);     -- 那么点击该坐标
+    touchUp(0);
+end
+          </PRE></UL></LI></UL>
+<HR>
+
+<H5>2.2.11 getColorRGB()</H5>
+<P>获取指定像素颜色的R、G、B三个值</P>
+<UL>
+  <LI>参数       
+  <UL>
+    <LI>参数1：X坐标 （number）</LI>
+    <LI>参数2：Y坐标 （number）</LI></UL></LI>
+  <LI>返回值       
+  <UL>
+    <LI>返回1：R（number）</LI>
+    <LI>返回2：G（number）</LI>
+    <LI>返回3：B（number）</LI></UL></LI>
+  <LI>示例       
+  <UL>
+<PRE>r, g, b = getColorRGB(100, 100);              -- 将坐标为(100,100)的点的颜色的R、G、B分别保存在变量r、g、b中
+if r == 0x00 and b == 0x00 and g == 0xff then -- 如果该点颜色为0x0000ff(纯蓝色)
+    touchDown(0, 100, 100);                   -- 那么点击该坐标
+    touchUp(0);
+end
+          </PRE></UL></LI></UL>
+<HR>
+
+<H5>2.2.12 findColor()</H5>
+<P>全屏找色</P>
+<UL>
+  <LI>参数       
+  <UL>
+    <LI>参数1：要找的颜色（number）</LI></UL></LI>
+  <LI>返回值       
+  <UL>
+    <LI>返回1：X坐标，如果没找到返回-1（number）</LI>
+    <LI>返回2：Y坐标，如果没找到返回-1（number）</LI></UL></LI>
+  <LI>示例       
+  <UL>
+<PRE>x, y = findColor(0x0000ff); -- 在全屏范围找到第一个颜色为0x0000ff的点，将其坐标保存到变量x和y中
+if x ~= -1 and y ~= -1 then -- 如果找到了
+    touchDown(0, x, y);     -- 点击那个点
+    touchUp(0);
+end
+          </PRE></UL></LI></UL>
+<HR>
+
+<H5>2.2.13 findColorFuzzy()</H5>
+<P>全屏模糊找色</P>
+<UL>
+  <LI>参数       
+  <UL>
+    <LI>参数1：要找的颜色（number）</LI>
+    <LI>参数2：精确度    （number）</LI></UL></LI>
+  <LI>返回值       
+  <UL>
+    <LI>返回1：X坐标，如果没找到返回-1（number）</LI>
+    <LI>返回2：Y坐标，如果没找到返回-1（number）</LI></UL></LI>
+  <LI>示例       
+  <UL>
+<PRE>x, y = findColorFuzzy(0x0000ff, 90); -- 在全屏范围找到第一个颜色为0x0000ff的点，精确度为90%，将其坐标保存到变量x和y中
+if x ~= -1 and y ~= -1 then          -- 如果找到了
+    touchDown(0, x, y);              -- 点击那个点
+    touchUp(0);
+end
+          </PRE></UL></LI></UL>
+<HR>
+
+<H5>2.2.14 findColorInRegion()</H5>
+<P>区域找色</P>
+<UL>
+  <LI>参数       
+  <UL>
+    <LI>参数1：要找的颜色     （number）</LI>
+    <LI>参数2：区域左上角X坐标（number）</LI>
+    <LI>参数3：区域左上角Y坐标（number）</LI>
+    <LI>参数4：区域右下角X坐标（number）</LI>
+    <LI>参数5：区域右下角Y坐标（number）</LI></UL></LI>
+  <LI>返回值       
+  <UL>
+    <LI>返回1：X坐标，如果没找到返回-1（number）</LI>
+    <LI>返回2：Y坐标，如果没找到返回-1（number）</LI></UL></LI>
+  <LI>示例       
+  <UL>
+<PRE>x, y = findColorInRegion(0x0000ff, 100, 100, 200, 200); -- 在区域[(100,100)(200,200)]范围找到第一个颜色为0x0000ff的点，将其坐标保存到变量x和y中
+if x ~= -1 and y ~= -1 then                             -- 如果找到了
+    touchDown(0, x, y);                                 -- 点击那个点
+    touchUp(0);
+end
+          </PRE></UL></LI></UL>
+<HR>
+
+<H5>2.2.15 findColorInRegionFuzzy()</H5>
+<P>区域模糊找色</P>
+<UL>
+  <LI>参数       
+  <UL>
+    <LI>参数1：要找的颜色     （number）</LI>
+    <LI>参数2：精确度         （number）</LI>
+    <LI>参数3：区域左上角X坐标（number）</LI>
+    <LI>参数4：区域左上角Y坐标（number）</LI>
+    <LI>参数5：区域右下角X坐标（number）</LI>
+    <LI>参数6：区域右下角Y坐标（number）</LI></UL></LI>
+  <LI>返回值       
+  <UL>
+    <LI>返回1：X坐标，如果没找到返回-1（number）</LI>
+    <LI>返回2：Y坐标，如果没找到返回-1（number）</LI></UL></LI>
+  <LI>示例       
+  <UL>
+<PRE>x, y = findColorInRegionFuzzy(0x0000ff, 90, 100, 100, 200, 200); -- 在区域[(100,100)(200,200)]范围找到第一个颜色为0x0000ff的点，精确度为90%，将其坐标保存到变量x和y中
+if x ~= -1 and y ~= -1 then                                      -- 如果找到了
+    touchDown(0, x, y);                                          -- 点击那个点
+    touchUp(0);
+end
+          </PRE></UL></LI></UL>
+<HR>
+
+<H5>2.2.16 findImage()</H5>
+<P>全屏找图</P>
+<UL>
+  <LI>参数       
+  <UL>
+    <LI>参数1：要找的图片的路径，只支持BMP格式（string）</LI>
+    <LI>参数2：（可选）指定图片中透明颜色（number）</LI></UL></LI>
+  <LI>返回值       
+  <UL>
+    <LI>返回1：X坐标，如果没找到返回-1（number）</LI>
+    <LI>返回2：Y坐标，如果没找到返回-1（number）</LI></UL></LI>
+  <LI>示例       
+  <UL>
+<PRE>x, y = findImage("/var/touchelf/a.bmp"); -- 在全屏范围找到第一个路径为"/mnt/sdcar/a.bmp"的图片，将其左上角坐标保存到变量x和y中
+if x ~= -1 and y ~= -1 then            -- 如果找到了
+    touchDown(0, x, y);                -- 点击那个点
+    touchUp(0);
+end
+
+x, y = findImage("/var/touchelf/a.bmp", 0xffffff); -- 在全屏范围找到第一个路径为"/mnt/sdcar/a.bmp"的图片，忽略图片中颜色为0xffffff（黑色）的点，将其左上角坐标保存到变量x和y中
+if x ~= -1 and y ~= -1 then                      -- 如果找到了
+    touchDown(0, x, y);                          -- 点击那个点
+    touchUp(0);
+end
+          </PRE></UL></LI></UL>
+<HR>
+
+<H5>2.2.17 findImageFuzzy()</H5>
+<P>全屏模糊找图</P>
+<UL>
+  <LI>参数       
+  <UL>
+    <LI>参数1：要找的图片的路径，只支持BMP格式（string）</LI>
+    <LI>参数2：精确度    （number）</LI>
+    <LI>参数3：（可选）指定图片中透明颜色（number）</LI></UL></LI>
+  <LI>返回值       
+  <UL>
+    <LI>返回1：X坐标，如果没找到返回-1（number）</LI>
+    <LI>返回2：Y坐标，如果没找到返回-1（number）</LI></UL></LI>
+  <LI>示例       
+  <UL>
+<PRE>x, y = findImageFuzzy("/var/touchelf/a.bmp", 90); -- 在全屏范围找到第一个路径为"/mnt/sdcar/a.bmp"的图片，精确度为90，将其左上角坐标保存到变量x和y中
+if x ~= -1 and y ~= -1 then                     -- 如果找到了
+    touchDown(0, x, y);                         -- 点击那个点
+    touchUp(0);
+end
+
+x, y = findImageFuzzy("/var/touchelf/a.bmp", 90, 0xffffff); -- 在全屏范围找到第一个路径为"/mnt/sdcar/a.bmp"的图片，精确度为90，忽略图片中颜色为0xffffff（黑色）的点，将其左上角坐标保存到变量x和y中
+if x ~= -1 and y ~= -1 then                               -- 如果找到了
+    touchDown(0, x, y);                                   -- 点击那个点
+    touchUp(0);
+end
+          </PRE></UL></LI></UL>
+<HR>
+
+<H5>2.2.18 findImageInRegion()</H5>
+<P>区域找图</P>
+<UL>
+  <LI>参数       
+  <UL>
+    <LI>参数1：要找的图片的路径，只支持BMP格式（string）</LI>
+    <LI>参数2：区域左上角X坐标（number）</LI>
+    <LI>参数3：区域左上角Y坐标（number）</LI>
+    <LI>参数4：区域右下角X坐标（number）</LI>
+    <LI>参数5：区域右下角Y坐标（number）</LI>
+    <LI>参数6：（可选）指定图片中透明颜色（number）</LI></UL></LI>
+  <LI>返回值       
+  <UL>
+    <LI>返回1：X坐标，如果没找到返回-1（number）</LI>
+    <LI>返回2：Y坐标，如果没找到返回-1（number）</LI></UL></LI>
+  <LI>示例       
+  <UL>
+<PRE>x, y = findImageInRegion("/var/touchelf/a.bmp", 100, 100, 200, 200); -- 在区域[(100,100)(200,200)]范围找到第一个路径为"/mnt/sdcar/a.bmp"的图片，将其左上角坐标保存到变量x和y中
+if x ~= -1 and y ~= -1 then                                        -- 如果找到了
+    touchDown(0, x, y);                                            -- 点击那个点
+    touchUp(0);
+end
+
+x, y = findImageInRegion("/var/touchelf/a.bmp", 100, 100, 200, 200, 0xffffff); -- 在区域[(100,100)(200,200)]范围找到第一个路径为"/mnt/sdcar/a.bmp"的图片，忽略图片中颜色为0xffffff（黑色）的点，将其左上角坐标保存到变量x和y中
+if x ~= -1 and y ~= -1 then                                                  -- 如果找到了
+    touchDown(0, x, y);                                                      -- 点击那个点
+    touchUp(0);
+end
+          </PRE></UL></LI></UL>
+<HR>
+
+<H5>2.2.19 findImageInRegionFuzzy()</H5>
+<P>区域模糊找图</P>
+<UL>
+  <LI>参数       
+  <UL>
+    <LI>参数1：要找的图片的路径，只支持BMP格式（string）</LI>
+    <LI>参数2：精确度         （number）</LI>
+    <LI>参数3：区域左上角X坐标（number）</LI>
+    <LI>参数4：区域左上角Y坐标（number）</LI>
+    <LI>参数5：区域右下角X坐标（number）</LI>
+    <LI>参数6：区域右下角Y坐标（number）</LI>
+    <LI>参数7：（可选）指定图片中透明颜色（number）</LI></UL></LI>
+  <LI>返回值       
+  <UL>
+    <LI>返回1：X坐标，如果没找到返回-1（number）</LI>
+    <LI>返回2：Y坐标，如果没找到返回-1（number）</LI></UL></LI>
+  <LI>示例       
+  <UL>
+<PRE>x, y = findImageInRegionFuzzy("/var/touchelf/a.bmp", 90, 100, 100, 200, 200); -- 在区域[(100,100)(200,200)]范围找到第一个路径为"/mnt/sdcar/a.bmp"的图片，精确度为90，将其左上角坐标保存到变量x和y中
+if x ~= -1 and y ~= -1 then                                                 -- 如果找到了
+    touchDown(0, x, y);                                                     -- 点击那个点
+    touchUp(0);
+end
+
+x, y = findImageInRegionFuzzy("/var/touchelf/a.bmp", 90, 100, 100, 200, 200, 0xffffff); -- 在区域[(100,100)(200,200)]范围找到第一个路径为"/mnt/sdcar/a.bmp"的图片，精确度为90，忽略图片中颜色为0xffffff（黑色）的点，将其左上角坐标保存到变量x和y中
+if x ~= -1 and y ~= -1 then                                                           -- 如果找到了
+    touchDown(0, x, y);                                                               -- 点击那个点
+    touchUp(0);
+end
+          </PRE></UL></LI></UL>
+<HR>
+
+<H5>2.2.20 keepScreen()</H5>
+<P>开启/关闭屏幕保持。当开启屏幕保持时，后续的找图、找色等函数不会重新获取屏幕图像，而是使用开启屏幕保持之前的屏幕图像；当关闭屏幕保持时，后续的找图、找色等函数会每次都重新获取屏幕图像。适当使用此函数可以优化脚本运行效率</P>
+<UL>
+  <LI>参数       
+  <UL>
+    <LI>参数1：是否启用屏幕保持（boolean）</LI></UL></LI>
+  <LI>返回值       
+  <UL>
+    <LI>无</LI></UL></LI>
+  <LI>示例       
+  <UL>
+<PRE>keepScreen(true);                                                         -- 开启屏幕保持
+if getColor(100, 100) == 0x000000 or getColor(200, 200) == 0x000000 then  -- 进行2次取色，由于启用了屏幕保持，这2次取色不会重新获取2次屏幕图像，这样可以提高性能
+    notifyMessage("yes");                                                 -- 如果(100,100)和(200,200)坐标有一个颜色为黑色，输出"yes"
+else                                                                      -- 否则
+    notifyMessage("no");                                                  -- 输出"no"
+end
+keepScreen(false);                                                        -- 关闭屏幕保持
+        </PRE></UL></LI></UL>
+<HR>
+
+<H5>2.2.21 snapshotScreen()</H5>
+<P>全屏截图</P>
+<UL>
+  <LI>参数       
+  <UL>
+    <LI>参数1：保存截图的路径（string）</LI></UL></LI>
+  <LI>返回值       
+  <UL>
+    <LI>无</LI></UL></LI>
+  <LI>示例       
+  <UL>
+<PRE>snapshotScreen("/var/touchelf/a.bmp"); -- 将全屏截图保存到路径为"/var/touchelf/a.bmp"的图片中
+        </PRE></UL></LI></UL>
+<HR>
+
+<H5>2.2.22 snapshotRegion()</H5>
+<P>区域截图</P>
+<UL>
+  <LI>参数       
+  <UL>
+    <LI>参数1：保存截图的路径（string）</LI>
+    <LI>参数2：区域左上角X坐标（number）</LI>
+    <LI>参数3：区域左上角Y坐标（number）</LI>
+    <LI>参数4：区域右下角X坐标（number）</LI>
+    <LI>参数5：区域右下角Y坐标（number）</LI></UL></LI>
+  <LI>返回值       
+  <UL>
+    <LI>无</LI></UL></LI>
+  <LI>示例       
+  <UL>
+<PRE>snapshotRegion("/var/touchelf/a.bmp", 100, 100, 200, 200); -- 将区域[(100,100)(200,200)]的截图保存到路径为/var/touchelf/a.bmp的图片中
+        </PRE></UL></LI></UL>
+<HR>
+
+<H5>2.2.23 inputText()</H5>
+<P>输入字符串</P>
+<UL>
+  <LI>参数       
+  <UL>
+    <LI>参数1：要输入的字符串（string）</LI></UL></LI>
+  <LI>返回值       
+  <UL>
+    <LI>无</LI></UL></LI>
+  <LI>示例       
+  <UL>
+<PRE>inputText("你好Hello"); -- 在当前选中的文字输入框中输入字符串"你好Hello"
+          </PRE></UL></LI></UL>
+<HR>
+
+<H5>2.2.24 getDeviceID()</H5>
+<P>获取设备串号</P>
+<UL>
+  <LI>参数       
+  <UL>
+    <LI>无</LI></UL></LI>
+  <LI>返回值       
+  <UL>
+    <LI>设备串号</LI></UL></LI>
+  <LI>示例       
+  <UL>
+<PRE>deviceID = getDeviceID(); -- 将设备ID保存到deviceID变量中
+        </PRE></UL></LI></UL>
+<HR>
+
+<H5>2.2.25 getNetTime()</H5>
+<P>获取网络时间</P>
+<UL>
+  <LI>参数       
+  <UL>
+    <LI>无</LI></UL></LI>
+  <LI>返回值       
+  <UL>
+    <LI>网络时间, 
+    该时间与lua的os.time()函数一样，返回的是UTC时间1970年1月1日0时0分0秒到现在流逝的秒数，可以配合os.date()转换成方便阅读的格式。返回-1表示不能连接网络时间服务器</LI></UL></LI>
+  <LI>示例       
+  <UL>
+<PRE>time = getNetTime();
+if time ~= -1 then
+    tt = os.date("*t", time);
+    if tt.year &gt; 2014 and tt.month &gt; 2 and tt.day &gt; 15 and tt.hour &gt; 12 and tt.min &gt; 30 then
+        notifyMessage("当前时间超过了2013年2月15日12点30分");
+    end
+else
+    notifyMessage("请连接网络");
+end
+        </PRE></UL></LI></UL>
+<HR>
+
+<H5>2.2.26 rotateScreen()</H5>
+<P>旋转屏幕的坐标体系, 后续的找图、找色、截图、触摸动作都会使用新的坐标体系。</P>
+<UL>
+  <LI>参数       
+  <UL>
+    <LI>0: 保持原本的坐标体系。对于IOS设备来说，此时HOME键在下方时的屏幕左上角为原点。</LI>
+    <LI>90: 坐标系统向右转90度。对于IOS设备来说，此时HOME键在右方时的屏幕左上角为原点</LI>
+    <LI>-90: 坐标系统向左转90度。对于IOS设备来说，此时HOME键在左方时的屏幕左上角为原点</LI>
+    <LI>180: 坐标系统倒立。对于IOS设备来说，此时HOME键在下方时的屏幕左上角为原点</LI></UL></LI>
+  <LI>返回值       
+  <UL>
+    <LI>无</LI></UL></LI>
+  <LI>示例       
+  <UL>
+<PRE>rotateScreen(90);         -- 旋转坐标体系向右90度，大多数横屏游戏使用此坐标体系.
+touchDown(0, 100, 100);   -- 发送触摸动作，此时点击的点使用新的坐标体系.
+touchUp(0);
+        </PRE></UL></LI></UL>
+<HR>
+
+<H5>2.2.27 appRun()</H5>
+<P>打开指定软件</P>
+<UL>
+  <LI>参数       
+  <UL>
+    <LI>参数1: 想要打开的软件的包名（string）</LI></UL></LI>
+  <LI>返回值       
+  <UL>
+    <LI>无</LI></UL></LI>
+  <LI>示例       
+  <UL>
+<PRE>appRun("com.apple.mobilesafari"); -- 打开系统自带浏览器
+        </PRE></UL></LI></UL>
+<HR>
+
+<H5>2.2.28 appKill()</H5>
+<P>关闭指定软件</P>
+<UL>
+  <LI>参数       
+  <UL>
+    <LI>参数1: 想要关闭的软件的包名（string）</LI></UL></LI>
+  <LI>返回值       
+  <UL>
+    <LI>无</LI></UL></LI>
+  <LI>示例       
+  <UL>
+<PRE>appKill("com.apple.mobilesafari"); -- 关闭系统自带浏览器
+        </PRE></UL></LI></UL>
+<HR>
+</BODY></HTML>

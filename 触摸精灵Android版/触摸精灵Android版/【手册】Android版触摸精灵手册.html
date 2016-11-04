@@ -1,0 +1,867 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+  </head>
+  <body>
+    <h2 align="center">触摸精灵帮助手册</h2>
+
+    <!-- 索引 -->
+    <ul>
+      <li><a href="#basic">1 基本使用</a>
+      <ul>
+        <li><a href="#how_record">1.1 如何录制</a></li>
+        <li><a href="#how_play">1.2 如何播放</a></li>
+        <li><a href="#how_edit">1.3 如何编辑</a></li>
+        <li><a href="#how_export">1.4 如何导出</a></li>
+        <li><a href="#how_import">1.5 如何导入</a></li>
+        <li><a href="#how_register">1.6 如何注册</a></li>
+      </ul>
+      </li>
+      <li><a href="#script">2 脚本语言</a>
+      <ul>
+        <li><a href="#script1">2.1 基本语法</a></li>
+        <li><a href="#script2">2.2 扩展函数</a></li>
+      </ul>
+      </li>
+    </ul>
+
+    <!-- 基本使用 -->
+    <h3><a name="basic">1 基本使用</a></h3>
+
+    <h4><a name="how_record">1.1 如何录制</a></h4>
+    <ol>
+      <li>点击底部导航栏切换到“制作”界面。</li>
+      <li>点击顶部标签栏切换到“录制脚本”标签页。</li>
+      <li>在名称框输入想要录制的脚本的名称。</li>
+      <li>在描述框输入想要录制的脚本的描述。</li>
+      <li>点击“录制”按钮。</li>
+      <li>阅读弹出的提示对话框中的内容，然后点击“确定”按钮。</li>
+      <li>切换到手机的任意界面，按下热键开始录制（在使用控制条时按下控制条“录制”按钮开始录制）。</li>
+      <li>再次按下热键停止录制（在使用控制条时按下控制条“停止”按钮停止录制）。</li>
+    </ol><hr />
+
+    <h4><a name="how_play">1.2 如何播放</a></h4>
+    <ol>
+      <li>点击底部导航栏切换到“列表”界面。</li>
+      <li>单击想要播放的脚本，或者长按想要播放的脚本，在弹出的菜单中选择“播放”。</li>
+      <li>阅读弹出的提示对话框中的内容，然后点击“确定”按钮。</li>
+      <li>切换到手机的任意界面，按下热键开始播放（在使用控制条时按下控制条“播放”按钮开始播放）。</li>
+      <li>脚本在播放完毕后会自动停止，或在播放过程中再次按下热键停止播放（在使用控制条时按下控制条“停止”按钮停止播放，按下“暂停”按钮暂停播放，按下“退出”按钮退出此次播放）。</li>
+    </ol><hr />
+
+    <h4><a name="how_edit">1.3 如何编辑</a></h4>
+    <ol>
+      <li>点击底部导航栏切换到“列表”界面。</li>
+      <li>单击想要播放的脚本，或者长按想要播放的脚本，在弹出的菜单中选择“编辑”。</li>
+      <li>在弹出的界面中直接编辑脚本文件，或点击“插入”按钮选择支持的函数。</li>
+      <li>点击“保存”按钮保存脚本文件，点击“退出”按钮退出编辑界面。</li>
+    </ol><hr />
+
+    <h4><a name="how_export">1.4 如何导出</a></h4>
+    <ol>
+      <li>点击底部导航栏切换到“播放”界面。</li>
+      <li>长按想要播放的脚本，在弹出的菜单中选择“导出”。</li>
+      <li>在弹出的文件浏览器中切换到想要导出的目录, 然后点击“确定”按钮。</li>
+    </ol><hr />
+
+    <h4><a name="how_import">1.5 如何导入</a></h4>
+    <ol>
+      <li>点击底部导航栏切换到“录制”界面。</li>
+      <li>点击顶部标签栏切换到“导入”标签页。</li>
+      <li>在文件浏览器中选中要导入的脚本, 然后点击“导入”按钮。</li>
+    </ol><hr />
+
+    <h4><a name="how_register">1.6 如何注册</a></h4>
+    <ol>
+      <li>点击底部导航栏切换到“设置”界面。</li>
+      <li>点击“注册状态”，获取您的设备的唯一序列号（三选一：IMEI码用于绑定手机，IMSI码用于绑定SIM卡，WMAC码用于绑定平板电脑）。</li>
+      <li>登录<a href="http://aisence.taobao.com">http://aisence.taobao.com</a>，购买前请仔细阅读购买说明。</li>
+      <li>购买注册码，在附加信息中留下您的IMEI码或IMSI码或WMAC码、邮箱。</li>
+      <li>我们会尽快将注册文件发送到您的邮箱中。</li>
+      <li>将注册文件放入手机的SD卡中。</li>
+      <li>点击底部导航栏切换到“设置”界面。</li>
+      <li>点击“导入注册文件”，在弹出的文件浏览器中选中注册文件，然后点击确定。</li>
+      <li>看到“导入成功”的提示后完成注册。再次点击“注册状态”时显示“已注册”以及该注册文件的到期时间。</li>
+    </ol><hr />
+
+    <!-- 高级使用 -->
+    <h3><a name="script">2 脚本语言</a></h3>
+    <p>
+    触摸精灵使用Lua语言作为底层脚本语言，支持Lua 5.2版本的所有语法与基本库函数，并在Lua语言的基础上添加了一些扩展函数，用于发送触摸事件、找图、找色等高级功能的实现。
+    </p><hr />
+
+    <h4><a name="script1">2.1 基本语法</a></h4>
+    <p>
+    用户可参考Lua的<a href="http://www.lua.org/manual/5.2/">官方手册</a>或者其他资料来学习以下基本语法：
+    <ul>
+      <li>注释</li>
+      <li>变量与类型</li>
+      <li>运算符</li>
+      <li>赋值</li>
+      <li>条件控制</li>
+      <li>循环控制</li>
+      <li>函数定义</li>
+      <li>库函数</li>
+      <li>等等</li>
+    </ul>
+    </p><hr />
+
+    <h4><a name="script2">2.2 扩展函数</a></h4>
+
+    <h5>2.2.1 logDebug()</h5>
+    <p>输出调试信息到系统日志</p>
+    <ul>
+      <li>参数
+      <ul>
+        <li>参数1：调试信息（string）</li>
+      </ul>
+      </li>
+
+      <li>返回值
+      <ul>
+        <li>无</li>
+      </ul>
+      </li>
+
+      <li>示例
+      <ul>
+        <pre>
+logDebug("hello"); -- 输出"hello"到系统日志
+          </pre>
+      </ul>
+      </li>
+    </ul><hr />
+
+    <h5>2.2.2 mSleep()</h5>
+    <p>进行毫秒级别延迟</p>
+    <ul>
+      <li>参数
+      <ul>
+        <li>参数1：毫秒数（number）</li>
+      </ul>
+      </li>
+
+      <li>返回值
+      <ul>
+        <li>无</li>
+      </ul>
+      </li>
+
+      <li>示例
+      <ul>
+        <pre>
+mSleep(1000); -- 延迟1秒
+          </pre>
+      </ul>
+      </li>
+    </ul><hr />
+
+    <h5>2.2.3 notifyMessage()</h5>
+    <p>以文字提示框的方式通知用户</p>
+    <ul>
+      <li>参数
+      <ul>
+        <li>参数1：提示文字（string）</li>
+      </ul>
+      </li>
+
+      <li>返回值
+      <ul>
+        <li>无</li>
+      </ul>
+      </li>
+
+      <li>示例
+      <ul>
+        <pre>
+notifyMessage("hello"); -- 在屏幕上显示"hello"
+          </pre>
+      </ul>
+      </li>
+    </ul><hr />
+
+    <h5>2.2.4 notifyVibrate()</h5>
+    <p>以震动方式通知用户</p>
+    <ul>
+      <li>参数
+      <ul>
+        <li>参数1：毫秒数（number）</li>
+      </ul>
+      </li>
+
+      <li>返回值
+      <ul>
+        <li>无</li>
+      </ul>
+      </li>
+
+      <li>示例
+      <ul>
+        <pre>
+notifyVibrate(1000); -- 让设备震动1秒
+          </pre>
+      </ul>
+      </li>
+    </ul><hr />
+
+    <h5>2.2.5 notifyVoice()</h5>
+    <p>以播放音频的方式通知用户</p>
+    <ul>
+      <li>参数
+      <ul>
+        <li>参数1：音频路径（string）</li>
+      </ul>
+      </li>
+
+      <li>返回值
+      <ul>
+        <li>无</li>
+      </ul>
+      </li>
+
+      <li>示例
+      <ul>
+        <pre>
+notifyVoice("/mnt/sdcard/a.mp3"); -- 播放路径为"/mnt/sdcard/a.mp3"的音频
+          </pre>
+      </ul>
+      </li>
+    </ul><hr />
+
+    <h5>2.2.6 touchDown()</h5>
+    <p>发送手指按下事件</p>
+    <ul>
+      <li>参数
+      <ul>
+        <li>参数1：手指ID, 范围0~128, 用于标识一个手指，在后续的touchMove()和touchUp()中需要使用（number）</li>
+        <li>参数2：X坐标 （number）</li>
+        <li>参数3：Y坐标 （number）</li>
+      </ul>
+      </li>
+
+      <li>返回值
+      <ul>
+        <li>无</li>
+      </ul>
+      </li>
+
+      <li>示例
+      <ul>
+        <pre>
+touchDown(0, 100, 100); -- ID为0的手指在坐标为(100, 100)的点按下
+touchUp(0);             -- ID为0的手指抬起
+          </pre>
+      </ul>
+      </li>
+    </ul><hr />
+
+    <h5>2.2.7 touchMove()</h5>
+    <p>发送手指移动事件</p>
+    <ul>
+      <li>参数
+      <ul>
+        <li>参数1：touchDown()时传入的手指ID（number）</li>
+        <li>参数2：X坐标 （number）</li>
+        <li>参数3：Y坐标 （number）</li>
+      </ul>
+      </li>
+
+      <li>返回值
+      <ul>
+        <li>无</li>
+      </ul>
+      </li>
+
+      <li>示例
+      <ul>
+        <pre>
+touchDown(0, 100, 100); -- ID为0的手指在坐标为(100, 100)的点按下
+touchMove(0, 200, 100); -- ID为0的手指滑动到坐标为(200, 100)的点
+touchUp(0);             -- ID为0的手指抬起
+          </pre>
+      </ul>
+      </li>
+    </ul><hr />
+
+    <h5>2.2.8 touchUp()</h5>
+    <p>发送手指抬起事件</p>
+    <ul>
+      <li>参数
+      <ul>
+        <li>参数1：touchDown()时传入的手指ID（number）</li>
+      </ul>
+      </li>
+
+      <li>返回值
+      <ul>
+        <li>无</li>
+      </ul>
+      </li>
+
+      <li>示例
+      <ul>
+        <pre>
+touchDown(0, 100, 100); -- ID为0的手指在坐标为(100, 100)的点按下
+touchUp(0);             -- ID为0的手指抬起
+          </pre>
+      </ul>
+      </li>
+    </ul><hr />
+
+    <h5>2.2.9 getScreenResolution()</h5>
+    <p>获取当前屏幕分辨率</p>
+    <ul>
+      <li>参数
+      <ul>
+        <li>无</li>
+      </ul>
+      </li>
+
+      <li>返回值
+      <ul>
+        <li>返回1：宽度（number）</li>
+        <li>返回2：高度（number）</li>
+      </ul>
+      </li>
+
+      <li>示例
+      <ul>
+        <pre>
+w, h = getScreenResolution();                  -- 将屏幕宽度和高度分别保存在变量w、h中
+notifyMessage(string.format("%d,%d\n", w, h)); -- 将宽度和高度用提示框显示到屏幕上
+          </pre>
+      </ul>
+      </li>
+    </ul><hr />
+
+    <h5>2.2.10 getScreenColorBits()</h5>
+    <p>获取当前屏幕色彩位数</p>
+    <ul>
+      <li>参数
+      <ul>
+        <li>无</li>
+      </ul>
+      </li>
+
+      <li>返回值
+      <ul>
+        <li>返回1：色彩位数（number）</li>
+      </ul>
+      </li>
+
+      <li>示例
+      <ul>
+        <pre>
+c = getScreenColorBits();                -- 将屏幕色彩位数保存在变量c中
+notifyMessage(string.format("%d\n", c)); -- 将色彩位数用提示框显示到屏幕上
+          </pre>
+      </ul>
+      </li>
+    </ul><hr />
+
+    <h5>2.2.11 getColor()</h5>
+    <p>获取指定像素的颜色</p>
+    <ul>
+      <li>参数
+      <ul>
+        <li>参数1：X坐标 （number）</li>
+        <li>参数2：Y坐标 （number）</li>
+      </ul>
+      </li>
+
+      <li>返回值
+      <ul>
+        <li>返回1：色彩位数（number）</li>
+      </ul>
+      </li>
+
+      <li>示例
+      <ul>
+        <pre>
+c = getColor(100, 100);         -- 将坐标为(100,100)的点的颜色保存在变量c中
+if c == 0x0000ff then           -- 如果该点颜色为0x0000ff(纯蓝色)
+    touchDown(0, 100, 100);     -- 那么点击该坐标
+    touchUp(0);
+end
+          </pre>
+      </ul>
+      </li>
+    </ul><hr />
+
+    <h5>2.2.11 getColorRGB()</h5>
+    <p>获取指定像素颜色的R、G、B三个值</p>
+    <ul>
+      <li>参数
+      <ul>
+        <li>参数1：X坐标 （number）</li>
+        <li>参数2：Y坐标 （number）</li>
+      </ul>
+      </li>
+
+      <li>返回值
+      <ul>
+        <li>返回1：R（number）</li>
+        <li>返回2：G（number）</li>
+        <li>返回3：B（number）</li>
+      </ul>
+      </li>
+
+      <li>示例
+      <ul>
+        <pre>
+r, g, b = getColorRGB(100, 100);              -- 将坐标为(100,100)的点的颜色的R、G、B分别保存在变量r、g、b中
+if r == 0x00 and b == 0x00 and g == 0xff then -- 如果该点颜色为0x0000ff(纯蓝色)
+    touchDown(0, 100, 100);                   -- 那么点击该坐标
+    touchUp(0);
+end
+          </pre>
+      </ul>
+      </li>
+    </ul><hr />
+
+    <h5>2.2.12 findColor()</h5>
+    <p>全屏找色</p>
+    <ul>
+      <li>参数
+      <ul>
+        <li>参数1：要找的颜色（number）</li>
+      </ul>
+      </li>
+
+      <li>返回值
+      <ul>
+        <li>返回1：X坐标，如果没找到返回-1（number）</li>
+        <li>返回2：Y坐标，如果没找到返回-1（number）</li>
+      </ul>
+      </li>
+
+      <li>示例
+      <ul>
+        <pre>
+x, y = findColor(0x0000ff); -- 在全屏范围找到第一个颜色为0x0000ff的点，将其坐标保存到变量x和y中
+if x ~= -1 and y ~= -1 then -- 如果找到了
+    touchDown(0, x, y);     -- 点击那个点
+    touchUp(0);
+end
+          </pre>
+      </ul>
+      </li>
+    </ul><hr />
+
+    <h5>2.2.13 findColorFuzzy()</h5>
+    <p>全屏模糊找色</p>
+    <ul>
+      <li>参数
+      <ul>
+        <li>参数1：要找的颜色（number）</li>
+        <li>参数2：精确度    （number）</li>
+      </ul>
+      </li>
+
+      <li>返回值
+      <ul>
+        <li>返回1：X坐标，如果没找到返回-1（number）</li>
+        <li>返回2：Y坐标，如果没找到返回-1（number）</li>
+      </ul>
+      </li>
+
+      <li>示例
+      <ul>
+        <pre>
+x, y = findColorFuzzy(0x0000ff, 90); -- 在全屏范围找到第一个颜色为0x0000ff的点，精确度为90%，将其坐标保存到变量x和y中
+if x ~= -1 and y ~= -1 then          -- 如果找到了
+    touchDown(0, x, y);              -- 点击那个点
+    touchUp(0);
+end
+          </pre>
+      </ul>
+      </li>
+    </ul><hr />
+
+
+    <h5>2.2.14 findColorInRegion()</h5>
+    <p>区域找色</p>
+    <ul>
+      <li>参数
+      <ul>
+        <li>参数1：要找的颜色     （number）</li>
+        <li>参数2：区域左上角X坐标（number）</li>
+        <li>参数3：区域左上角Y坐标（number）</li>
+        <li>参数4：区域右下角X坐标（number）</li>
+        <li>参数5：区域右下角Y坐标（number）</li>
+      </ul>
+      </li>
+
+      <li>返回值
+      <ul>
+        <li>返回1：X坐标，如果没找到返回-1（number）</li>
+        <li>返回2：Y坐标，如果没找到返回-1（number）</li>
+      </ul>
+      </li>
+
+      <li>示例
+      <ul>
+        <pre>
+x, y = findColorInRegion(0x0000ff, 100, 100, 200, 200); -- 在区域[(100,100)(200,200)]范围找到第一个颜色为0x0000ff的点，将其坐标保存到变量x和y中
+if x ~= -1 and y ~= -1 then                             -- 如果找到了
+    touchDown(0, x, y);                                 -- 点击那个点
+    touchUp(0);
+end
+          </pre>
+      </ul>
+      </li>
+    </ul><hr />
+
+    <h5>2.2.15 findColorInRegionFuzzy()</h5>
+    <p>区域模糊找色</p>
+    <ul>
+      <li>参数
+      <ul>
+        <li>参数1：要找的颜色     （number）</li>
+        <li>参数2：精确度         （number）</li>
+        <li>参数3：区域左上角X坐标（number）</li>
+        <li>参数4：区域左上角Y坐标（number）</li>
+        <li>参数5：区域右下角X坐标（number）</li>
+        <li>参数6：区域右下角Y坐标（number）</li>
+      </ul>
+      </li>
+
+      <li>返回值
+      <ul>
+        <li>返回1：X坐标，如果没找到返回-1（number）</li>
+        <li>返回2：Y坐标，如果没找到返回-1（number）</li>
+      </ul>
+      </li>
+
+      <li>示例
+      <ul>
+        <pre>
+x, y = findColorInRegionFuzzy(0x0000ff, 90, 100, 100, 200, 200); -- 在区域[(100,100)(200,200)]范围找到第一个颜色为0x0000ff的点，精确度为90%，将其坐标保存到变量x和y中
+if x ~= -1 and y ~= -1 then                                      -- 如果找到了
+    touchDown(0, x, y);                                          -- 点击那个点
+    touchUp(0);
+end
+          </pre>
+      </ul>
+      </li>
+    </ul><hr />
+
+    <h5>2.2.16 findImage()</h5>
+    <p>全屏找图</p>
+    <ul>
+      <li>参数
+      <ul>
+        <li>参数1：要找的图片的路径，只支持BMP格式（string）</li>
+        <li>参数2：（可选）指定图片中透明颜色（number）</li>
+      </ul>
+      </li>
+
+      <li>返回值
+      <ul>
+        <li>返回1：X坐标，如果没找到返回-1（number）</li>
+        <li>返回2：Y坐标，如果没找到返回-1（number）</li>
+      </ul>
+      </li>
+
+      <li>示例
+      <ul>
+        <pre>
+x, y = findImage("/mnt/sdcard/a.bmp"); -- 在全屏范围找到第一个路径为"/mnt/sdcar/a.bmp"的图片，将其左上角坐标保存到变量x和y中
+if x ~= -1 and y ~= -1 then            -- 如果找到了
+    touchDown(0, x, y);                -- 点击那个点
+    touchUp(0);
+end
+
+x, y = findImage("/mnt/sdcard/a.bmp", 0xffffff); -- 在全屏范围找到第一个路径为"/mnt/sdcar/a.bmp"的图片，忽略图片中颜色为0xffffff（黑色）的点，将其左上角坐标保存到变量x和y中
+if x ~= -1 and y ~= -1 then                      -- 如果找到了
+    touchDown(0, x, y);                          -- 点击那个点
+    touchUp(0);
+end
+          </pre>
+      </ul>
+      </li>
+    </ul><hr />
+
+    <h5>2.2.17 findImageFuzzy()</h5>
+    <p>全屏模糊找图</p>
+    <ul>
+      <li>参数
+      <ul>
+        <li>参数1：要找的图片的路径，只支持BMP格式（string）</li>
+        <li>参数2：精确度    （number）</li>
+        <li>参数3：（可选）指定图片中透明颜色（number）</li>
+      </ul>
+      </li>
+
+      <li>返回值
+      <ul>
+        <li>返回1：X坐标，如果没找到返回-1（number）</li>
+        <li>返回2：Y坐标，如果没找到返回-1（number）</li>
+      </ul>
+      </li>
+
+      <li>示例
+      <ul>
+        <pre>
+x, y = findImageFuzzy("/mnt/sdcard/a.bmp", 90); -- 在全屏范围找到第一个路径为"/mnt/sdcar/a.bmp"的图片，精确度为90，将其左上角坐标保存到变量x和y中
+if x ~= -1 and y ~= -1 then                     -- 如果找到了
+    touchDown(0, x, y);                         -- 点击那个点
+    touchUp(0);
+end
+
+x, y = findImageFuzzy("/mnt/sdcard/a.bmp", 90, 0xffffff); -- 在全屏范围找到第一个路径为"/mnt/sdcar/a.bmp"的图片，精确度为90，忽略图片中颜色为0xffffff（黑色）的点，将其左上角坐标保存到变量x和y中
+if x ~= -1 and y ~= -1 then                               -- 如果找到了
+    touchDown(0, x, y);                                   -- 点击那个点
+    touchUp(0);
+end
+          </pre>
+      </ul>
+      </li>
+    </ul><hr />
+
+
+    <h5>2.2.18 findImageInRegion()</h5>
+    <p>区域找图</p>
+    <ul>
+      <li>参数
+      <ul>
+        <li>参数1：要找的图片的路径，只支持BMP格式（string）</li>
+        <li>参数2：区域左上角X坐标（number）</li>
+        <li>参数3：区域左上角Y坐标（number）</li>
+        <li>参数4：区域右下角X坐标（number）</li>
+        <li>参数5：区域右下角Y坐标（number）</li>
+        <li>参数6：（可选）指定图片中透明颜色（number）</li>
+      </ul>
+      </li>
+
+      <li>返回值
+      <ul>
+        <li>返回1：X坐标，如果没找到返回-1（number）</li>
+        <li>返回2：Y坐标，如果没找到返回-1（number）</li>
+      </ul>
+      </li>
+
+      <li>示例
+      <ul>
+        <pre>
+x, y = findImageInRegion("/mnt/sdcard/a.bmp", 100, 100, 200, 200); -- 在区域[(100,100)(200,200)]范围找到第一个路径为"/mnt/sdcar/a.bmp"的图片，将其左上角坐标保存到变量x和y中
+if x ~= -1 and y ~= -1 then                                        -- 如果找到了
+    touchDown(0, x, y);                                            -- 点击那个点
+    touchUp(0);
+end
+
+x, y = findImageInRegion("/mnt/sdcard/a.bmp", 100, 100, 200, 200, 0xffffff); -- 在区域[(100,100)(200,200)]范围找到第一个路径为"/mnt/sdcar/a.bmp"的图片，忽略图片中颜色为0xffffff（黑色）的点，将其左上角坐标保存到变量x和y中
+if x ~= -1 and y ~= -1 then                                                  -- 如果找到了
+    touchDown(0, x, y);                                                      -- 点击那个点
+    touchUp(0);
+end
+          </pre>
+      </ul>
+      </li>
+    </ul><hr />
+
+    <h5>2.2.19 findImageInRegionFuzzy()</h5>
+    <p>区域模糊找图</p>
+    <ul>
+      <li>参数
+      <ul>
+        <li>参数1：要找的图片的路径，只支持BMP格式（string）</li>
+        <li>参数2：精确度         （number）</li>
+        <li>参数3：区域左上角X坐标（number）</li>
+        <li>参数4：区域左上角Y坐标（number）</li>
+        <li>参数5：区域右下角X坐标（number）</li>
+        <li>参数6：区域右下角Y坐标（number）</li>
+        <li>参数7：（可选）指定图片中透明颜色（number）</li>
+      </ul>
+      </li>
+
+      <li>返回值
+      <ul>
+        <li>返回1：X坐标，如果没找到返回-1（number）</li>
+        <li>返回2：Y坐标，如果没找到返回-1（number）</li>
+      </ul>
+      </li>
+
+      <li>示例
+      <ul>
+        <pre>
+x, y = findImageInRegionFuzzy("/mnt/sdcard/a.bmp", 90, 100, 100, 200, 200); -- 在区域[(100,100)(200,200)]范围找到第一个路径为"/mnt/sdcar/a.bmp"的图片，精确度为90，将其左上角坐标保存到变量x和y中
+if x ~= -1 and y ~= -1 then                                                 -- 如果找到了
+    touchDown(0, x, y);                                                     -- 点击那个点
+    touchUp(0);
+end
+
+x, y = findImageInRegionFuzzy("/mnt/sdcard/a.bmp", 90, 100, 100, 200, 200, 0xffffff); -- 在区域[(100,100)(200,200)]范围找到第一个路径为"/mnt/sdcar/a.bmp"的图片，精确度为90，忽略图片中颜色为0xffffff（黑色）的点，将其左上角坐标保存到变量x和y中
+if x ~= -1 and y ~= -1 then                                                           -- 如果找到了
+    touchDown(0, x, y);                                                               -- 点击那个点
+    touchUp(0);
+end
+          </pre>
+      </ul>
+      </li>
+    </ul><hr />
+
+    <h5>2.2.20 keepScreen()</h5>
+    <p>开启/关闭屏幕保持。当开启屏幕保持时，后续的找图、找色等函数不会重新获取屏幕图像，而是使用开启屏幕保持之前的屏幕图像；当关闭屏幕保持时，后续的找图、找色等函数会每次都重新获取屏幕图像。适当使用此函数可以优化脚本运行效率</p>
+    <ul>
+      <li>参数
+      <ul>
+        <li>参数1：是否启用屏幕保持（boolean）</li>
+      </ul>
+      </li>
+
+      <li>返回值
+      <ul>
+        <li>无</li>
+      </ul>
+      </li>
+
+      <li>示例
+      <ul>
+        <pre>
+keepScreen(true);                                                         -- 开启屏幕保持
+if getColor(100, 100) == 0x000000 or getColor(200, 200) == 0x000000 then  -- 进行2次取色，由于启用了屏幕保持，这2次取色不会重新获取2次屏幕图像，这样可以提高性能
+    notifyMessage("yes");                                                 -- 如果(100,100)和(200,200)坐标有一个颜色为黑色，输出"yes"
+else                                                                      -- 否则
+    notifyMessage("no");                                                  -- 输出"no"
+end
+keepScreen(false);                                                        -- 关闭屏幕保持
+        </pre>
+      </ul>
+      </li>
+    </ul><hr />
+
+    <h5>2.2.21 snapshotScreen()</h5>
+    <p>全屏截图</p>
+    <ul>
+      <li>参数
+      <ul>
+        <li>参数1：保存截图的路径（string）</li>
+      </ul>
+      </li>
+
+      <li>返回值
+      <ul>
+        <li>无</li>
+      </ul>
+      </li>
+
+      <li>示例
+      <ul>
+        <pre>
+snapshotScreen("/mnt/sdcard/a.bmp"); -- 将全屏截图保存到路径为"/mnt/sdcard/a.bmp"的图片中
+        </pre>
+      </ul>
+      </li>
+    </ul><hr />
+
+    <h5>2.2.22 snapshotRegion()</h5>
+    <p>区域截图</p>
+    <ul>
+      <li>参数
+      <ul>
+        <li>参数1：保存截图的路径（string）</li>
+        <li>参数2：区域左上角X坐标（number）</li>
+        <li>参数3：区域左上角Y坐标（number）</li>
+        <li>参数4：区域右下角X坐标（number）</li>
+        <li>参数5：区域右下角Y坐标（number）</li>
+
+      </ul>
+      </li>
+
+      <li>返回值
+      <ul>
+        <li>无</li>
+      </ul>
+      </li>
+
+      <li>示例
+      <ul>
+        <pre>
+snapshotRegion("/mnt/sdcard/a.bmp", 100, 100, 200, 200); -- 将区域[(100,100)(200,200)]的截图保存到路径为/mnt/sdcard/a.bmp的图片中
+        </pre>
+      </ul>
+      </li>
+    </ul><hr />
+
+    <h5>2.2.23 getDeviceID()</h5>
+    <p>获取设备串号</p>
+    <ul>
+      <li>参数
+      <ul>
+        <li>无</li>
+      </ul>
+      </li>
+
+      <li>返回值
+      <ul>
+        <li>设备串号</li>
+      </ul>
+      </li>
+
+      <li>示例
+      <ul>
+        <pre>
+deviceID = getDeviceID(); -- 将设备ID保存到deviceID变量中
+        </pre>
+      </ul>
+      </li>
+    </ul><hr />
+
+    <h5>2.2.24 getNetTime()</h5>
+    <p>获取网络时间</p>
+    <ul>
+      <li>参数
+      <ul>
+        <li>无</li>
+      </ul>
+      </li>
+      <li>返回值
+      <ul>
+        <li>网络时间, 该时间与lua的os.time()函数一样，返回的是UTC时间1970年1月1日0时0分0秒到现在流逝的秒数，可以配合os.date()转换成方便阅读的格式。返回-1表示不能连接网络时间服务器</li>
+      </ul>
+      </li>
+      <li>示例
+      <ul>
+        <pre>
+time = getNetTime();
+if time ~= -1 then
+    tt = os.date("*t", time);
+    if tt.year > 2014 and tt.month > 2 and tt.day > 15 and tt.hour > 12 and tt.sec > 30 then
+        notifyMessage("当前时间超过了2013年2月15日12点30分");
+    end
+else
+    notifyMessage("请连接网络");
+end
+        </pre>
+      </ul>
+      </li>
+    </ul><hr />
+    <h5>2.2.25 rotateScreen()</h5>
+    <p>旋转屏幕的坐标体系, 后续的找图、找色、截图、触摸动作都会使用新的坐标体系。</p>
+    <ul>
+      <li>参数
+      <ul>
+        <li>0: 保持原本的坐标体系。对于IOS设备来说，此时HOME键在下方时的屏幕左上角为原点。</li>
+        <li>90: 坐标系统向右转90度。对于IOS设备来说，此时HOME键在右方时的屏幕左上角为原点</li>
+        <li>-90: 坐标系统向左转90度。对于IOS设备来说，此时HOME键在左方时的屏幕左上角为原点</li>
+        <li>180: 坐标系统倒立。对于IOS设备来说，此时HOME键在下方时的屏幕左上角为原点</li>
+      </ul>
+      </li>
+      <li>返回值
+      <ul>
+        <li>无</li>
+      </ul>
+      </li>
+      <li>示例
+      <ul>
+        <pre>
+rotateScreen(90);         -- 旋转坐标体系向右90度，大多数横屏游戏使用此坐标体系.
+touchDown(0, 100, 100);   -- 发送触摸动作，此时点击的点使用新的坐标体系.
+touchUp(0);
+        </pre>
+      </ul>
+      </li>
+    </ul><hr />
+  </body>
+</html>
